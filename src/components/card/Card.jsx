@@ -5,10 +5,17 @@ import { IoBookmarkSharp } from 'react-icons/io5';
 
 const Card = ({cla,btn ,book ,im}) => {
   return (
-    <div className='w-70 h-117  bg-white/90 relative  '>
-        <div className='absolute top-0 right-4 '>
-            <IoBookmarkSharp size={100} className={`object-contain ${book}`} />
-        </div>
+    <div className='w-70 h-127  bg-white/90 relative  overflow-hidden 
+                    transition-all duration-300 
+                    hover:shadow-2xl hover:-translate-y-2'>
+        <div className='absolute top-0 right-3 z-10'>
+                <IoBookmarkSharp 
+                  size={80} 
+                  className={` cursor-pointer 
+                             transition-transform duration-300 
+                             hover:scale-125  ${book}`} 
+                />
+              </div>
         <div className='px-5 pt-10'>
             <div className='pb-5'>
             <img className='border  border-amber-700 rounded-xl  w-60 h-50' src={im} alt="" />
